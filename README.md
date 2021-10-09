@@ -4,4 +4,4 @@ The R script Hoel1972_runMCMC.R shows how to use mcmc implementation provided in
 
 The R script Hoel1972_plots.R contains the code needed for creating the figures in the supplementary material related to the analysis of the Hoel (1972) data.
 
-The R scripts beta_example.R, binomial_example.R, and normal_example.R contain the code needed for creating the figures associated with the examples in the main text.
+The R scripts beta_example.R, binomial_example.R, normal_example.R, and ternary_plot.R contain the code needed for creating the figures associated with the examples in the main text.
