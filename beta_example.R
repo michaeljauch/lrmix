@@ -1,16 +1,13 @@
+library(ggplot2)
 library(tidyverse)
 library(ggthemes)
 library(gridExtra)
-# fx = Beta(a,b), fy = Beta(a, b-delta)
-a = 1
-b = 3
-delta = 2
+# F = Beta(1, 3) and G = Beta(1, 1)
 u = seq(0.01, 0.99, 0.001)
-theta = beta(a,b-delta)/beta(a,b)
-neg_dr = -delta*(1-u)^(-1+delta)*beta(a,b-delta)/beta(a,b)
-fu = pbeta(u,a, b-delta)*neg_dr/(1-theta)
-fx = dbeta(u, a, b)
-fy = dbeta(u, a, b-delta)
+
+fu = dbeta(u, 2 ,2)
+fx = dbeta(u, 1, 3)
+fy = dbeta(u, 1, 1)
 df = data.frame(f = c(fx, fy),
                 x = rep(u, 2), 
                 dist = rep(c("F","G"), each = length(u)))
